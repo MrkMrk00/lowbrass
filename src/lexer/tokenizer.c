@@ -113,7 +113,7 @@ lb_tokenlist_t lb_tokenizer_parse_module(lb_arena_t* arena,
     tokenizer_state_t state;
     tokenizer_state_init(&state, arena);
 
-    read_file(&state.source, filename);
+    read_file(arena, &state.source, filename);
 
     char ch;
     while ((ch = advance(&state)) != '\0') {
